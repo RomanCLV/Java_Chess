@@ -1,26 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="258304dd-c7fe-4be5-91ee-6f1edd5ea2e5" name="Default Changelist" comment="" />
+    <list default="true" id="258304dd-c7fe-4be5-91ee-6f1edd5ea2e5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icon16x16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icon32x32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/info/version.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/OpenAL32.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/OpenAL64.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jinput-dx8.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jinput-dx8_64.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jinput-raw.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jinput-raw_64.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jinput-wintab.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/libjinput-linux.so" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/libjinput-linux64.so" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/libjinput-osx.jnilib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/liblwjgl.jnilib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/liblwjgl.so" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/liblwjgl64.so" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/libopenal.so" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/libopenal64.so" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/lwjgl.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/lwjgl64.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/openal.dylib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/backgnd.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/board2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/chess_sprites2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/fontchess.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/highlight2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/newChess.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/quit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/reinit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/selection2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sprites/undo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/ChessModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/Piece.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chess.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Chess.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1Xbq8oJ51GzAsXuslRDK38qo8RH" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Chess" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="fr.rphstudio.chess.launcher.MainLauncher" />
+      <module name="Chess" />
+      <option name="VM_PARAMETERS" value="-Djava.library.path=lib" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="true" file="$PROJECT_DIR$/pom.xml" goal="clean install" />
+      </method>
+    </configuration>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -45,10 +106,45 @@
       <option name="presentableId" value="Default" />
       <updated>1581324984898</updated>
       <workItem from="1581324989969" duration="52000" />
+      <workItem from="1581325196423" duration="474000" />
+      <workItem from="1581329445610" duration="3958000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="165" y="118" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581331267618">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="165" y="118" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1581331267618" />
+    <state x="533" y="166" key="#com.intellij.ide.util.MemberChooser" timestamp="1581330000035">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="533" y="166" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1581330000035" />
+    <state x="636" y="267" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1581330469004">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="636" y="267" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1440.900@0.0.1440.900" timestamp="1581330469004" />
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1581337486650">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1581337486650" />
+    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1581337486648">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1581337486648" />
+    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1581337486647">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1581337486647" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1581337486649">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1581337486649" />
   </component>
 </project>

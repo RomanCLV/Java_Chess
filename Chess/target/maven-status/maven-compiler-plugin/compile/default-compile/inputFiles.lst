@@ -1,0 +1,9 @@
+/Users/RomanCLV/Documents/GitHub/Java/Java_Chess/Chess/src/main/java/fr/rphstudio/chess/game/ChessModel.java
+/Users/RomanCLV/Documents/GitHub/Java/Java_Chess/Chess/src/main/java/fr/rphstudio/chess/interf/ChessException.java
+/Users/RomanCLV/Documents/GitHub/Java/Java_Chess/Chess/src/main/java/fr/rphstudio/chess/launcher/ChessFontManager.java
+/Users/RomanCLV/Documents/GitHub/Java/Java_Chess/Chess/src/main/java/fr/rphstudio/chess/launcher/ChessGameController.java
+/Users/RomanCLV/Documents/GitHub/Java/Java_Chess/Chess/src/main/java/fr/rphstudio/chess/interf/IChess.java
+/Users/RomanCLV/Documents/GitHub/Java/Java_Chess/Chess/src/main/java/fr/rphstudio/chess/interf/EmptyCellException.java
+/Users/RomanCLV/Documents/GitHub/Java/Java_Chess/Chess/src/main/java/fr/rphstudio/chess/game/Piece.java
+/Users/RomanCLV/Documents/GitHub/Java/Java_Chess/Chess/src/main/java/fr/rphstudio/chess/launcher/MainLauncher.java
+/Users/RomanCLV/Documents/GitHub/Java/Java_Chess/Chess/src/main/java/fr/rphstudio/chess/interf/OutOfBoardException.java
