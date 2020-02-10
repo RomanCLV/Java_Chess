@@ -8,11 +8,76 @@ import java.util.List;
 public class ChessModel implements IChess {
 
     private static ChessModel instance = new ChessModel();
-
+    
     public String boardPath;
+    
+    private Piece[][] boardGame;
 
     private ChessModel() {
-        boardPath = "../../../resources/sprites/board2.png";
+        this.boardPath = "../../../resources/sprites/board2.png";
+        this.boardGame = new Piece[8][];
+        for (int line = 0; line < 8; line++) {
+            this.boardGame[line] = new Piece[8];
+        }
+        createBoardGame();
+        //dispBoard();
+    }
+
+    private void createBoardGame() {
+        for (int line = 0; line < 8; line++) {
+            for (int column = 0; column < 8; column++) {
+                Piece piece = null;
+                switch (line) {
+                    case 0:
+                    case 7:
+                        switch (column) {
+                            case 0:
+                            case 7:
+                                piece = new Piece(ChessType.TYP_ROOK, line == 0 ? ChessColor.CLR_BLACK : ChessColor.CLR_WHITE);
+                                break;
+                            case 1:
+                            case 6:
+                                piece = new Piece(ChessType.TYP_KNIGHT, line == 0 ? ChessColor.CLR_BLACK : ChessColor.CLR_WHITE);
+                                break;
+                            case 2:
+                            case 5:
+                                piece = new Piece(ChessType.TYP_BISHOP, line == 0 ? ChessColor.CLR_BLACK : ChessColor.CLR_WHITE);
+                                break;
+                            case 3:
+                                piece = new Piece(ChessType.TYP_QUEEN, line == 0 ? ChessColor.CLR_BLACK : ChessColor.CLR_WHITE);
+                                break;
+                            case 4:
+                                piece = new Piece(ChessType.TYP_KING, line == 0 ? ChessColor.CLR_BLACK : ChessColor.CLR_WHITE);
+                                break;
+                        }
+                        break;
+                    case 1:
+                    case 6:
+                        piece = new Piece(ChessType.TYP_PAWN, line == 1 ? ChessColor.CLR_BLACK : ChessColor.CLR_WHITE);
+                        break;
+                    default:
+                        break;
+                }
+                this.boardGame[line][column] = piece;
+            }
+        }
+    }
+
+    private void dispBoard() {
+        for (int line = 0; line < 8; line++) {
+            for (int column = 0; column < 8; column++) {
+                if (this.boardGame[line][column] != null) {
+                    System.out.print(this.boardGame[line][column].getPieceType());
+                }
+                else {
+                    System.out.print("void");
+                }
+                if (column < 7) {
+                    System.out.print(" ; ");
+                }
+            }
+            System.out.println();
+        }
     }
 
     public static ChessModel getInstance() {
@@ -27,12 +92,18 @@ public class ChessModel implements IChess {
 
     @Override
     public ChessType getPieceType(ChessPosition p) throws EmptyCellException, OutOfBoardException {
-        return ChessType.TYP_PAWN;
+        if (this.boardGame[p.x][p.y] !=  null) {
+            return this.boardGame[p.x][p.y].getPieceType();
+        }
+        throw new EmptyCellException();
     }
 
     @Override
     public ChessColor getPieceColor(ChessPosition p) throws EmptyCellException, OutOfBoardException {
-        return ChessColor.CLR_WHITE;
+        if (this.boardGame[p.x][p.y] !=  null) {
+            return this.boardGame[p.x][p.y].getPieceColor();
+        }
+        throw new EmptyCellException();
     }
 
     @Override

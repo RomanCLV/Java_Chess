@@ -2,44 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="258304dd-c7fe-4be5-91ee-6f1edd5ea2e5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/icon16x16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/icon32x32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/info/version.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/OpenAL32.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/OpenAL64.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jinput-dx8.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jinput-dx8_64.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jinput-raw.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jinput-raw_64.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jinput-wintab.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libjinput-linux.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libjinput-linux64.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libjinput-osx.jnilib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/liblwjgl.jnilib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/liblwjgl.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/liblwjgl64.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libopenal.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/libopenal64.so" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/lwjgl.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/lwjgl64.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/openal.dylib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sprites/backgnd.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sprites/board2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sprites/chess_sprites2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sprites/fontchess.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sprites/highlight2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sprites/newChess.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sprites/quit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sprites/reinit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sprites/selection2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sprites/undo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/ChessModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/Piece.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Chess.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Chess.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/ChessModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/ChessModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-mac-osx.zip" beforeDir="false" afterPath="$PROJECT_DIR$/target/Chess-1.6.79-mac-osx.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-mac-osx/Chess-1.6.79/Chess-1.6.79.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/Chess-1.6.79-mac-osx/Chess-1.6.79/Chess-1.6.79.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-linux.zip" beforeDir="false" afterPath="$PROJECT_DIR$/target/Chess-1.6.79-release-linux.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-linux/Chess-1.6.79/Chess-1.6.79.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/Chess-1.6.79-release-linux/Chess-1.6.79/Chess-1.6.79.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-windows.zip" beforeDir="false" afterPath="$PROJECT_DIR$/target/Chess-1.6.79-release-windows.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-windows/Chess-1.6.79/Chess-1.6.79.exe" beforeDir="false" afterPath="$PROJECT_DIR$/target/Chess-1.6.79-release-windows/Chess-1.6.79/Chess-1.6.79.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79.exe" beforeDir="false" afterPath="$PROJECT_DIR$/target/Chess-1.6.79.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/Chess-1.6.79.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.1887538004.tmp/game.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.1887538004.tmp/game.sh.1076418458.filtered" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.2002605637.tmp/game.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.2002605637.tmp/game.sh.1162024684.filtered" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.2104232919.tmp/game.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.2104232919.tmp/game.sh.297216647.filtered" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.705237855.tmp/game.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.705237855.tmp/game.sh.317083842.filtered" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/rphstudio/chess/game/ChessModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/rphstudio/chess/game/ChessModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +89,7 @@
       <updated>1581324984898</updated>
       <workItem from="1581324989969" duration="52000" />
       <workItem from="1581325196423" duration="474000" />
-      <workItem from="1581329445610" duration="3958000" />
+      <workItem from="1581329445610" duration="8798000" />
     </task>
     <servers />
   </component>
@@ -130,21 +112,37 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="636" y="267" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1440.900@0.0.1440.900" timestamp="1581330469004" />
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1581337502694">
+    <state width="1398" height="177" key="GridCell.Tab.0.bottom" timestamp="1581342766477">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1581337502694" />
-    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1581337502692">
+    <state width="1398" height="177" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1581342766477" />
+    <state width="1398" height="177" key="GridCell.Tab.0.center" timestamp="1581342766473">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1581337502692" />
-    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1581337502691">
+    <state width="1398" height="177" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1581342766473" />
+    <state width="1398" height="177" key="GridCell.Tab.0.left" timestamp="1581342766473">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1581337502691" />
-    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1581337502693">
+    <state width="1398" height="177" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1581342766473" />
+    <state width="1398" height="177" key="GridCell.Tab.0.right" timestamp="1581342766475">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1581337502693" />
+    <state width="1398" height="177" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1581342766475" />
+    <state width="1398" height="303" key="GridCell.Tab.1.bottom" timestamp="1581341389332">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="303" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1581341389332" />
+    <state width="1398" height="303" key="GridCell.Tab.1.center" timestamp="1581341389331">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="303" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1581341389331" />
+    <state width="1398" height="303" key="GridCell.Tab.1.left" timestamp="1581341389331">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="303" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1581341389331" />
+    <state width="1398" height="303" key="GridCell.Tab.1.right" timestamp="1581341389332">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="303" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1581341389332" />
   </component>
 </project>
