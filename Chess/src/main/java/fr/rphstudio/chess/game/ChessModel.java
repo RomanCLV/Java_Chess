@@ -1,139 +1,85 @@
 package fr.rphstudio.chess.game;
 
 import fr.rphstudio.chess.interf.*;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.stream.*;
 
 public class ChessModel implements IChess {
 
     private static ChessModel instance = new ChessModel();
     
     public String boardPath;
-    
-    private Piece[][] boardGame;
+    private Board game;
+
+    private int modeBoard; // a supprimer quand on fera le retour coup d'avant
 
     private ChessModel() {
         this.boardPath = "../../../resources/sprites/board2.png";
-        this.boardGame = new Piece[8][];
-        for (int line = 0; line < 8; line++) {
-            this.boardGame[line] = new Piece[8];
-        }
-        createBoardGame();
-        //dispBoard();
-    }
-
-    private void createBoardGame() {
-        for (int line = 0; line < 8; line++) {
-            for (int column = 0; column < 8; column++) {
-                Piece piece = null;
-                switch (line) {
-                    case 0:
-                    case 7:
-                        switch (column) {
-                            case 0:
-                            case 7:
-                                piece = new Piece(ChessType.TYP_ROOK, line == 0 ? ChessColor.CLR_BLACK : ChessColor.CLR_WHITE);
-                                break;
-                            case 1:
-                            case 6:
-                                piece = new Piece(ChessType.TYP_KNIGHT, line == 0 ? ChessColor.CLR_BLACK : ChessColor.CLR_WHITE);
-                                break;
-                            case 2:
-                            case 5:
-                                piece = new Piece(ChessType.TYP_BISHOP, line == 0 ? ChessColor.CLR_BLACK : ChessColor.CLR_WHITE);
-                                break;
-                            case 3:
-                                piece = new Piece(ChessType.TYP_QUEEN, line == 0 ? ChessColor.CLR_BLACK : ChessColor.CLR_WHITE);
-                                break;
-                            case 4:
-                                piece = new Piece(ChessType.TYP_KING, line == 0 ? ChessColor.CLR_BLACK : ChessColor.CLR_WHITE);
-                                break;
-                        }
-                        break;
-                    case 1:
-                    case 6:
-                        piece = new Piece(ChessType.TYP_PAWN, line == 1 ? ChessColor.CLR_BLACK : ChessColor.CLR_WHITE);
-                        break;
-                    default:
-                        break;
-                }
-                this.boardGame[line][column] = piece;
-            }
-        }
-    }
-
-    private void dispBoard() {
-        for (int line = 0; line < 8; line++) {
-            for (int column = 0; column < 8; column++) {
-                if (this.boardGame[line][column] != null) {
-                    System.out.print(this.boardGame[line][column].getPieceType());
-                }
-                else {
-                    System.out.print("void");
-                }
-                if (column < 7) {
-                    System.out.print(" ; ");
-                }
-            }
-            System.out.println();
-        }
-    }
-
-    private Piece[] boardToArray() {
-        Piece[] pieces = new Piece[64];
-        for (int i = 0; i < 8; i++) {
-            for (int j = 0; j < 8; j++) {
-                pieces[i * 8 + j] = this.boardGame[i][j];
-            }
-        }
-        return pieces;
+        //this.game = new Board(); // pas besoin car reinit est appele des le debut
     }
 
     public static ChessModel getInstance() {
         return instance;
     }
 
-
     @Override
     public void reinit() {
-
+        boolean jeVeuxUnePartieDeTest = true;
+        if (jeVeuxUnePartieDeTest) {
+            switch (modeBoard) {
+                case 1:
+                    game = new Board(ChessType.TYP_ROOK);
+                    break;
+                case 2:
+                    game = new Board(ChessType.TYP_KNIGHT);
+                    break;
+                case 3:
+                    game = new Board(ChessType.TYP_BISHOP);
+                    break;
+                case 4:
+                    game = new Board(ChessType.TYP_QUEEN);
+                    break;
+                case 5:
+                    game = new Board(ChessType.TYP_KING);
+                    break;
+                default:
+                    modeBoard = 0;
+                    game = new Board(ChessType.TYP_PAWN);
+                    break;
+            }
+            modeBoard++;
+        }
+        else {
+            game = new Board();
+        }
     }
 
     @Override
     public ChessType getPieceType(ChessPosition p) throws EmptyCellException, OutOfBoardException {
-        if (this.boardGame[p.y][p.x] !=  null) {
-            return this.boardGame[p.y][p.x].getPieceType();
+        Piece piece = this.game.getPiece(p);
+        if (piece != null) {
+            return piece.getPieceType();
         }
         throw new EmptyCellException();
     }
 
     @Override
     public ChessColor getPieceColor(ChessPosition p) throws EmptyCellException, OutOfBoardException {
-        if (this.boardGame[p.y][p.x] !=  null) {
-            return this.boardGame[p.y][p.x].getPieceColor();
+        Piece piece = this.game.getPiece(p);
+        if (piece != null) {
+            return piece.getPieceColor();
         }
         throw new EmptyCellException();
     }
 
     @Override
-    public int getNbRemainingPieces(ChessColor color) git {
-        Piece[] pieces = boardToArray();
-        List<Piece> validPieces = new ArrayList<>();
-        for (Piece piece: pieces) {
-            if (piece != null && piece.getPieceColor() == color) {
-                validPieces.add(piece);
-            }
-        }
-        return validPieces.size();
+    public int getNbRemainingPieces(ChessColor color) {
+        return this.game.getNbPieceColor(color);
     }
 
     @Override
     public List<ChessPosition> getPieceMoves(ChessPosition p) {
-        return new ArrayList<>();
+        return this.game.getPieceMoves(p);
     }
 
     @Override
@@ -153,7 +99,8 @@ public class ChessModel implements IChess {
 
     @Override
     public boolean undoLastMove() {
-        return false;
+        reinit(); // a supprimer quand on fera la vraie methode
+        return true;
     }
 
     @Override
