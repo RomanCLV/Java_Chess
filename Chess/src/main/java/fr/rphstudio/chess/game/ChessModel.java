@@ -2,8 +2,11 @@ package fr.rphstudio.chess.game;
 
 import fr.rphstudio.chess.interf.*;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.*;
 
 public class ChessModel implements IChess {
 
@@ -80,6 +83,16 @@ public class ChessModel implements IChess {
         }
     }
 
+    private Piece[] boardToArray() {
+        Piece[] pieces = new Piece[64];
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                pieces[i * 8 + j] = this.boardGame[i][j];
+            }
+        }
+        return pieces;
+    }
+
     public static ChessModel getInstance() {
         return instance;
     }
@@ -92,23 +105,30 @@ public class ChessModel implements IChess {
 
     @Override
     public ChessType getPieceType(ChessPosition p) throws EmptyCellException, OutOfBoardException {
-        if (this.boardGame[p.x][p.y] !=  null) {
-            return this.boardGame[p.x][p.y].getPieceType();
+        if (this.boardGame[p.y][p.x] !=  null) {
+            return this.boardGame[p.y][p.x].getPieceType();
         }
         throw new EmptyCellException();
     }
 
     @Override
     public ChessColor getPieceColor(ChessPosition p) throws EmptyCellException, OutOfBoardException {
-        if (this.boardGame[p.x][p.y] !=  null) {
-            return this.boardGame[p.x][p.y].getPieceColor();
+        if (this.boardGame[p.y][p.x] !=  null) {
+            return this.boardGame[p.y][p.x].getPieceColor();
         }
         throw new EmptyCellException();
     }
 
     @Override
-    public int getNbRemainingPieces(ChessColor color) {
-        return 0;
+    public int getNbRemainingPieces(ChessColor color) git {
+        Piece[] pieces = boardToArray();
+        List<Piece> validPieces = new ArrayList<>();
+        for (Piece piece: pieces) {
+            if (piece != null && piece.getPieceColor() == color) {
+                validPieces.add(piece);
+            }
+        }
+        return validPieces.size();
     }
 
     @Override
