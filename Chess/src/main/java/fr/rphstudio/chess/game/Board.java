@@ -5,6 +5,7 @@ import fr.rphstudio.chess.interf.IChess.*;
 import java.util.ArrayList;
 import java.util.List;
 
+//class of chess board
 public class Board {
 
     private Piece[][] game;
@@ -37,6 +38,7 @@ public class Board {
         }
         if (false) {
             switch (mode) {
+                //all pawn locations
                 case TYP_PAWN:
                     setPiece(6, 0, new Piece(ChessType.TYP_PAWN, ChessColor.CLR_WHITE));
                     setPiece(6, 1, new Piece(ChessType.TYP_PAWN, ChessColor.CLR_WHITE));
@@ -53,6 +55,7 @@ public class Board {
                     setPiece(2, 7, new Piece(ChessType.TYP_PAWN, ChessColor.CLR_BLACK));
                     setPiece(3, 7, new Piece(ChessType.TYP_PAWN, ChessColor.CLR_BLACK));
                     break;
+                    //all Rook locations
                 case TYP_ROOK:
                     setPiece(4, 4, new Piece(ChessType.TYP_ROOK, ChessColor.CLR_BLACK));
                     setPiece(7, 0, new Piece(ChessType.TYP_ROOK, ChessColor.CLR_WHITE));
@@ -63,6 +66,7 @@ public class Board {
                     setPiece(3, 3, new Piece(ChessType.TYP_ROOK, ChessColor.CLR_WHITE));
                     setPiece(5, 3, new Piece(ChessType.TYP_ROOK, ChessColor.CLR_BLACK));
                     break;
+                    //all Knight locations
                 case TYP_KNIGHT:
                     setPiece(0, 0, new Piece(ChessType.TYP_KNIGHT, ChessColor.CLR_BLACK));
                     setPiece(0, 7, new Piece(ChessType.TYP_KNIGHT, ChessColor.CLR_WHITE));
@@ -72,6 +76,7 @@ public class Board {
                     setPiece(4, 4, new Piece(ChessType.TYP_KNIGHT, ChessColor.CLR_BLACK));
                     setPiece(5, 1, new Piece(ChessType.TYP_KNIGHT, ChessColor.CLR_BLACK));
                     break;
+                    //all Bishop locations
                 case TYP_BISHOP:
                     setPiece(4, 4, new Piece(ChessType.TYP_BISHOP, ChessColor.CLR_BLACK));
                     setPiece(7, 0, new Piece(ChessType.TYP_BISHOP, ChessColor.CLR_WHITE));
@@ -82,6 +87,7 @@ public class Board {
                     setPiece(1, 3, new Piece(ChessType.TYP_BISHOP, ChessColor.CLR_WHITE));
                     setPiece(5, 3, new Piece(ChessType.TYP_BISHOP, ChessColor.CLR_BLACK));
                     break;
+                    //all Queen locations
                 case TYP_QUEEN:
                     setPiece(4, 4, new Piece(ChessType.TYP_QUEEN, ChessColor.CLR_BLACK));
                     setPiece(7, 0, new Piece(ChessType.TYP_QUEEN, ChessColor.CLR_WHITE));
@@ -92,6 +98,7 @@ public class Board {
                     setPiece(1, 3, new Piece(ChessType.TYP_QUEEN, ChessColor.CLR_WHITE));
                     setPiece(5, 3, new Piece(ChessType.TYP_QUEEN, ChessColor.CLR_BLACK));
                     break;
+                    //all King locations
                 case TYP_KING:
                     setPiece(0, 0, new Piece(ChessType.TYP_KING, ChessColor.CLR_BLACK));
                     setPiece(1, 1, new Piece(ChessType.TYP_KING, ChessColor.CLR_BLACK));

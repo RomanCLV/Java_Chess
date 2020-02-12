@@ -8,6 +8,7 @@ import fr.rphstudio.chess.interf.IChess.*;
 import java.util.ArrayList;
 import java.util.List;
 
+//class of Queen piece
 public class Queen  implements IMove {
 
     @Override
