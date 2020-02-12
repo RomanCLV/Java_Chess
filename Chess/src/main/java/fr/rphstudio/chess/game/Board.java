@@ -142,7 +142,7 @@ public class Board {
         }
     }
 
-    private void dispBoard() {
+    /*private void dispBoard() {
         for (int line = 0; line < 8; line++) {
             for (int column = 0; column < 8; column++) {
                 if (this.game[line][column] != null) {
@@ -157,7 +157,7 @@ public class Board {
             }
             System.out.println();
         }
-    }
+    }*/
 
     public Piece[] toArray() {
         Piece[] pieces = new Piece[64];
