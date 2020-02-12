@@ -9,7 +9,12 @@ public class Board {
 
     private Piece[][] game;
 
+    private List<ChessType> whitePiecesLost;
+    private List<ChessType> blackPiecesLost;
+
     public Board() {
+        whitePiecesLost = new ArrayList<>();
+        blackPiecesLost = new ArrayList<>();
         this.game = new Piece[8][];
         for (int line = 0; line < 8; line++) {
             this.game[line] = new Piece[8];
@@ -18,6 +23,9 @@ public class Board {
     }
 
     public Board(ChessType mode) {
+        whitePiecesLost = new ArrayList<>();
+        blackPiecesLost = new ArrayList<>();
+
         this.game = new Piece[8][];
         for (int line = 0; line < 8; line++) {
             this.game[line] = new Piece[8];
@@ -134,7 +142,7 @@ public class Board {
         }
     }
 
-    private void dispBoard() {
+    /*private void dispBoard() {
         for (int line = 0; line < 8; line++) {
             for (int column = 0; column < 8; column++) {
                 if (this.game[line][column] != null) {
@@ -149,7 +157,7 @@ public class Board {
             }
             System.out.println();
         }
-    }
+    }*/
 
     public Piece[] toArray() {
         Piece[] pieces = new Piece[64];
@@ -179,10 +187,6 @@ public class Board {
         this.game[line][column] = value;
     }
 
-    public List<ChessPosition> getPieceMoves(ChessPosition p) {
-        return getPiece(p).move.getPossibleMoves(p, this);
-    }
-
     public int getNbPieceColor(ChessColor color) {
         List<Piece> validPieces = new ArrayList<>();
         for (Piece piece: toArray()) {
@@ -191,5 +195,23 @@ public class Board {
             }
         }
         return validPieces.size();
+    }
+
+    public void addLostPiece(Piece piece) {
+        if (piece != null) {
+            if (piece.getPieceColor() == ChessColor.CLR_WHITE) {
+                whitePiecesLost.add(piece.getPieceType());
+            }
+            else {
+                blackPiecesLost.add(piece.getPieceType());
+            }
+        }
+    }
+
+    public List<ChessType> getPiecesLost(ChessColor color) {
+        if (color == ChessColor.CLR_BLACK) {
+            return this.blackPiecesLost;
+        }
+        return this.whitePiecesLost;
     }
 }

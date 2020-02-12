@@ -18,8 +18,9 @@ public class Pawn implements IMove {
 
         ChessColor color = board.getPiece(p).getPieceColor();
         int way = color == ChessColor.CLR_BLACK ? 1 : -1;
-        Piece pieceTested = null;
+        Piece pieceTested;
 
+        // eat left
         if (column - 1 >= 0) {
             pieceTested = board.getPiece(line + way, column - 1);
             if (pieceTested != null && color != pieceTested.getPieceColor()) {
@@ -27,6 +28,7 @@ public class Pawn implements IMove {
             }
         }
 
+        // eat right
         if (column + 1 < 8) {
             pieceTested = board.getPiece(line + way, column + 1);
             if (pieceTested != null && color != pieceTested.getPieceColor()) {

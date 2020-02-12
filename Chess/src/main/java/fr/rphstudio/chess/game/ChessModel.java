@@ -79,12 +79,47 @@ public class ChessModel implements IChess {
 
     @Override
     public List<ChessPosition> getPieceMoves(ChessPosition p) {
-        return this.game.getPieceMoves(p);
+        Piece piece = this.game.getPiece(p);
+        if (piece != null) {
+            return piece.getPiecesMoves(p, this.game);
+        }
+        return new ArrayList<>();
     }
 
     @Override
     public void movePiece(ChessPosition p0, ChessPosition p1) {
+        Piece piece  = this.game.getPiece(p0);
+        Piece target = this.game.getPiece(p1);
 
+        if (piece.getPieceType() == ChessType.TYP_KING && target != null && piece.getPieceColor() == target.getPieceColor()) {
+            int x1;
+            int x2;
+            if (p1.x == 0) {
+                x1 = 2;
+                x2 = 3;
+            }
+            else {
+                x1 = 6;
+                x2 = 5;
+            }
+            this.game.setPiece(new ChessPosition(x1, p1.y), piece);
+            this.game.setPiece(new ChessPosition(x2, p1.y), target);
+            this.game.setPiece(p0, null);
+            this.game.setPiece(p1, null);
+        }
+        else {
+            this.game.addLostPiece(this.game.getPiece(p1));
+            this.game.setPiece(p1, piece);
+            this.game.setPiece(p0, null);
+            piece.increaseNbTurn();
+            if (piece.getPieceType() == ChessType.TYP_PAWN)
+            {
+                if (p1.y == 7 || p1.y == 0) {
+                    Piece queen = new Piece(ChessType.TYP_QUEEN, piece.getPieceColor());
+                    this.game.setPiece(p1, queen);
+                }
+            }
+        }
     }
 
     @Override
@@ -94,7 +129,7 @@ public class ChessModel implements IChess {
 
     @Override
     public List<ChessType> getRemovedPieces(ChessColor color) {
-        return new ArrayList<>();
+        return this.game.getPiecesLost(color);
     }
 
     @Override
