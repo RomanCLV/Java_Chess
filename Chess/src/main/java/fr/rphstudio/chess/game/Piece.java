@@ -3,15 +3,19 @@ package fr.rphstudio.chess.game;
 import fr.rphstudio.chess.game.pieces.*;
 import fr.rphstudio.chess.interf.IChess.*;
 
+import java.util.List;
+
 public class Piece {
 
     private ChessType type;
     private ChessColor color;
-    public IMove move;
+    private IMove move;
+    private int nbTurns;
 
     public Piece(ChessType type, ChessColor color) {
         this.type = type;
         this.color = color;
+        this.nbTurns = 0;
         switch (type) {
             case TYP_PAWN:
                 this.move = new Pawn();
@@ -43,5 +47,17 @@ public class Piece {
 
     public ChessColor getPieceColor() {
         return this.color;
+    }
+
+    public List<ChessPosition> getPiecesMoves (ChessPosition p, Board board) {
+        return this.move.getPossibleMoves(p, board);
+    }
+
+    public void increaseNbTurn() {
+        this.nbTurns++;
+    }
+
+    public boolean hasMoved() {
+        return this.nbTurns > 0;
     }
 }

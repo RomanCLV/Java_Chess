@@ -79,12 +79,20 @@ public class ChessModel implements IChess {
 
     @Override
     public List<ChessPosition> getPieceMoves(ChessPosition p) {
-        return this.game.getPieceMoves(p);
+        Piece piece = this.game.getPiece(p);
+        if (piece != null) {
+            return piece.getPiecesMoves(p, this.game);
+        }
+        return new ArrayList<>();
     }
 
     @Override
     public void movePiece(ChessPosition p0, ChessPosition p1) {
-
+        Piece piece = this.game.getPiece(p0);
+        this.game.addLostPiece(this.game.getPiece(p1));
+        this.game.setPiece(p1, piece);
+        this.game.setPiece(p0, null);
+        piece.increaseNbTurn();
     }
 
     @Override
@@ -94,7 +102,7 @@ public class ChessModel implements IChess {
 
     @Override
     public List<ChessType> getRemovedPieces(ChessColor color) {
-        return new ArrayList<>();
+        return this.game.getPiecesLost(color);
     }
 
     @Override
