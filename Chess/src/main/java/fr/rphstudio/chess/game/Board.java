@@ -7,6 +7,8 @@ import java.util.List;
 
 public class Board {
 
+    private static List<Board> states = new ArrayList<Board>();
+
     private Piece[][] game;
 
     private List<ChessType> whitePiecesLost;
@@ -157,23 +159,6 @@ public class Board {
         }
     }
 
-    /*private void dispBoard() {
-        for (int line = 0; line < 8; line++) {
-            for (int column = 0; column < 8; column++) {
-                if (this.game[line][column] != null) {
-                    System.out.print(this.game[line][column].getPieceType());
-                }
-                else {
-                    System.out.print("void");
-                }
-                if (column < 7) {
-                    System.out.print(" ; ");
-                }
-            }
-            System.out.println();
-        }
-    }*/
-
     public Piece[] toArray() {
         Piece[] pieces = new Piece[64];
         for (int i = 0; i < 8; i++) {
@@ -261,6 +246,7 @@ public class Board {
             setPiece(p1, piece);
             setPiece(p0, null);
             piece.increaseNbTurn();
+
             if (piece.getPieceType() == ChessType.TYP_PAWN && (p1.y == 7 || p1.y == 0)) {
                 setPiece(p1, new Piece(ChessType.TYP_QUEEN, piece.getPieceColor()));
             }
@@ -305,6 +291,20 @@ public class Board {
         return ChessKingState.KING_SAFE;
     }
 
+    public void addState(Board newState) {
+        states.add(newState);
+    }
+
+    public Board returnLastState() {
+        if (states.size() > 0) {
+            int lastIndex = states.size() - 1;
+            Board boardTmp = states.get(lastIndex);
+            states.remove(lastIndex);
+            return boardTmp;
+        }
+        return null;
+    }
+
     public Board clone() {
         Board boardTmp = new Board();
         Piece[][] gameTmp = new Piece[8][8];
@@ -317,6 +317,8 @@ public class Board {
             }
         }
         boardTmp.game = gameTmp;
+        boardTmp.whitePiecesLost = new ArrayList<>(whitePiecesLost);
+        boardTmp.blackPiecesLost = new ArrayList<>(blackPiecesLost);
         return boardTmp;
     }
 }

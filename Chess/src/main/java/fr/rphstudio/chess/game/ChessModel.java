@@ -82,6 +82,17 @@ public class ChessModel implements IChess {
         if (piece != null) {
             List<ChessPosition> moves = piece.getPiecesMoves(p, this.game);
             List<ChessPosition> validMoves = new ArrayList<>();
+
+            if (piece.getPieceType() == ChessType.TYP_KING && this.game.getKingState(piece.getPieceColor()) == ChessKingState.KING_THREATEN) {
+                for (int i = 0; i < moves.size(); i++) {
+                    Piece pieceTest = this.game.getPiece(moves.get(i));
+                    if (pieceTest != null && pieceTest.getPieceType() == ChessType.TYP_ROOK) {
+                        moves.remove(i);
+                        i--;
+                    }
+                }
+            }
+
             for (ChessPosition position : moves) {
                 Board boardTmp = this.game.clone();
                 boardTmp.movePiece(p, position);
@@ -96,6 +107,7 @@ public class ChessModel implements IChess {
 
     @Override
     public void movePiece(ChessPosition p0, ChessPosition p1) {
+        this.game.addState(this.game.clone());
         this.game.movePiece(p0, p1);
     }
 
@@ -111,7 +123,15 @@ public class ChessModel implements IChess {
 
     @Override
     public boolean undoLastMove() {
-        return true;
+        Board boardTmp = this.game.returnLastState();
+        if (boardTmp != null) {
+            this.game = boardTmp;
+            return true;
+        }
+        else {
+            reinit();
+            return false;
+        }
     }
 
     @Override
