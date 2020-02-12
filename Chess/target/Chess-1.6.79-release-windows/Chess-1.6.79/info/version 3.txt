@@ -1,0 +1,6 @@
+Object-Oriented Programming
+Student Chess Application v1.6.79
+Teacher  (interface) : Romuald GRIGNON
+BG le PO
+Students (game core) : CodingFactory by ITESCIA
+2018-2020
