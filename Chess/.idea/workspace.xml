@@ -1,36 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="258304dd-c7fe-4be5-91ee-6f1edd5ea2e5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/ChessModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/ChessModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/pieces/King.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/pieces/King.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/pieces/Pawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/pieces/Pawn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-mac-osx.zip" beforeDir="false" afterPath="$PROJECT_DIR$/target/Chess-1.6.79-mac-osx.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-mac-osx/Chess-1.6.79/Chess-1.6.79.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/Chess-1.6.79-mac-osx/Chess-1.6.79/Chess-1.6.79.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-linux.zip" beforeDir="false" afterPath="$PROJECT_DIR$/target/Chess-1.6.79-release-linux.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-linux/Chess-1.6.79/Chess-1.6.79.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/Chess-1.6.79-release-linux/Chess-1.6.79/Chess-1.6.79.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-windows.zip" beforeDir="false" afterPath="$PROJECT_DIR$/target/Chess-1.6.79-release-windows.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-windows/Chess-1.6.79/Chess-1.6.79.exe" beforeDir="false" afterPath="$PROJECT_DIR$/target/Chess-1.6.79-release-windows/Chess-1.6.79/Chess-1.6.79.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79.exe" beforeDir="false" afterPath="$PROJECT_DIR$/target/Chess-1.6.79.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/Chess-1.6.79.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.1604969339.tmp/game.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.1604969339.tmp/game.sh.1577520469.filtered" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.1782619799.tmp/game.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.1782619799.tmp/game.sh.1151612855.filtered" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.2043067739.tmp/game.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.2043067739.tmp/game.sh.14151672.filtered" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.615966524.tmp/game.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.615966524.tmp/game.sh.1495338788.filtered" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/rphstudio/chess/game/Board$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/rphstudio/chess/game/Board.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/rphstudio/chess/game/Board.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/rphstudio/chess/game/ChessModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/rphstudio/chess/game/ChessModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/rphstudio/chess/game/pieces/King.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/rphstudio/chess/game/pieces/King.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/rphstudio/chess/game/pieces/Pawn.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/rphstudio/chess/game/pieces/Pawn.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-    </list>
+    <list default="true" id="258304dd-c7fe-4be5-91ee-6f1edd5ea2e5" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
