@@ -31,6 +31,36 @@ public class King implements IMove {
                 }
             }
         }
+        if (!board.getPiece(p).hasMoved()) {
+            Piece rook = board.getPiece(p.y, 0);
+            if (rook != null && rook.getPieceType() == ChessType.TYP_ROOK && !rook.hasMoved()) {
+                boolean leftWayVoid = true;
+                for (int i = p.x - 1; i > 0; i--) {
+                    if (board.getPiece(p.y, i) != null) {
+                        leftWayVoid = false;
+                        break;
+                    }
+                }
+                if (leftWayVoid) {
+                    positions.add(new ChessPosition(0, p.y));
+                }
+            }
+
+            rook = board.getPiece(p.y, 7);
+            if (rook != null && rook.getPieceType() == ChessType.TYP_ROOK && !rook.hasMoved()) {
+                boolean rightWayVoid = true;
+                for (int i = p.x + 1; i < 7; i++) {
+                    if (board.getPiece(p.y, i) != null) {
+                        rightWayVoid = false;
+                        break;
+                    }
+                }
+                if (rightWayVoid) {
+                    positions.add(new ChessPosition(7, p.y));
+                }
+            }
+        }
+
         return positions;
     }
 
