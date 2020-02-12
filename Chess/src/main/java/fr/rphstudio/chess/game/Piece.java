@@ -49,8 +49,14 @@ public class Piece {
         return this.color;
     }
 
+    private void setNbTurns(int value) {
+        this.nbTurns = value;
+    }
+
     public List<ChessPosition> getPiecesMoves (ChessPosition p, Board board) {
-        return this.move.getPossibleMoves(p, board);
+        List<ChessPosition> moves = this.move.getPossibleMoves(p, board);
+
+        return  moves;
     }
 
     public void increaseNbTurn() {
@@ -59,5 +65,11 @@ public class Piece {
 
     public boolean hasMoved() {
         return this.nbTurns > 0;
+    }
+
+    public Piece clone() {
+        Piece pieceTmp = new Piece(this.type, this.color);
+        pieceTmp.setNbTurns(this.nbTurns);
+        return pieceTmp;
     }
 }

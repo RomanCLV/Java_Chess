@@ -31,6 +31,8 @@ public class King implements IMove {
                 }
             }
         }
+
+        // Castling
         if (!board.getPiece(p).hasMoved()) {
             Piece rook = board.getPiece(p.y, 0);
             if (rook != null && rook.getPieceType() == ChessType.TYP_ROOK && !rook.hasMoved()) {
@@ -60,7 +62,6 @@ public class King implements IMove {
                 }
             }
         }
-
         return positions;
     }
 

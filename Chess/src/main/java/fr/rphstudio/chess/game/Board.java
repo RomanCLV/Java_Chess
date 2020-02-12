@@ -1,6 +1,7 @@
 package fr.rphstudio.chess.game;
 
 import fr.rphstudio.chess.interf.IChess.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,70 +35,85 @@ public class Board {
                 this.game[line][column] = null;
             }
         }
-        switch (mode) {
-            case TYP_PAWN:
-                setPiece(6, 0, new Piece(ChessType.TYP_PAWN, ChessColor.CLR_WHITE));
-                setPiece(6, 1, new Piece(ChessType.TYP_PAWN, ChessColor.CLR_WHITE));
-                setPiece(5, 2, new Piece(ChessType.TYP_PAWN, ChessColor.CLR_WHITE));
-                setPiece(5, 4, new Piece(ChessType.TYP_PAWN, ChessColor.CLR_WHITE));
-                setPiece(5, 6, new Piece(ChessType.TYP_PAWN, ChessColor.CLR_WHITE));
-                setPiece(6, 6, new Piece(ChessType.TYP_PAWN, ChessColor.CLR_WHITE));
-                setPiece(5, 7, new Piece(ChessType.TYP_PAWN, ChessColor.CLR_WHITE));
+        if (false) {
+            switch (mode) {
+                case TYP_PAWN:
+                    setPiece(6, 0, new Piece(ChessType.TYP_PAWN, ChessColor.CLR_WHITE));
+                    setPiece(6, 1, new Piece(ChessType.TYP_PAWN, ChessColor.CLR_WHITE));
+                    setPiece(5, 2, new Piece(ChessType.TYP_PAWN, ChessColor.CLR_WHITE));
+                    setPiece(5, 4, new Piece(ChessType.TYP_PAWN, ChessColor.CLR_WHITE));
+                    setPiece(5, 6, new Piece(ChessType.TYP_PAWN, ChessColor.CLR_WHITE));
+                    setPiece(6, 6, new Piece(ChessType.TYP_PAWN, ChessColor.CLR_WHITE));
+                    setPiece(5, 7, new Piece(ChessType.TYP_PAWN, ChessColor.CLR_WHITE));
 
-                setPiece(4, 1, new Piece(ChessType.TYP_PAWN, ChessColor.CLR_BLACK));
-                setPiece(1, 1, new Piece(ChessType.TYP_PAWN, ChessColor.CLR_BLACK));
-                setPiece(2, 2, new Piece(ChessType.TYP_PAWN, ChessColor.CLR_BLACK));
-                setPiece(4, 3, new Piece(ChessType.TYP_PAWN, ChessColor.CLR_BLACK));
-                setPiece(2, 7, new Piece(ChessType.TYP_PAWN, ChessColor.CLR_BLACK));
-                setPiece(3, 7, new Piece(ChessType.TYP_PAWN, ChessColor.CLR_BLACK));
-                break;
-            case TYP_ROOK:
-                setPiece(4, 4, new Piece(ChessType.TYP_ROOK, ChessColor.CLR_BLACK));
-                setPiece(7, 0, new Piece(ChessType.TYP_ROOK, ChessColor.CLR_WHITE));
-                setPiece(0, 7, new Piece(ChessType.TYP_ROOK, ChessColor.CLR_BLACK));
-                setPiece(6, 2, new Piece(ChessType.TYP_ROOK, ChessColor.CLR_BLACK));
-                setPiece(6, 3, new Piece(ChessType.TYP_ROOK, ChessColor.CLR_WHITE));
-                setPiece(3, 5, new Piece(ChessType.TYP_ROOK, ChessColor.CLR_WHITE));
-                setPiece(3, 3, new Piece(ChessType.TYP_ROOK, ChessColor.CLR_WHITE));
-                setPiece(5, 3, new Piece(ChessType.TYP_ROOK, ChessColor.CLR_BLACK));
-                break;
-            case TYP_KNIGHT:
-                setPiece(0, 0, new Piece(ChessType.TYP_KNIGHT, ChessColor.CLR_BLACK));
-                setPiece(0, 7, new Piece(ChessType.TYP_KNIGHT, ChessColor.CLR_WHITE));
-                setPiece(2, 6, new Piece(ChessType.TYP_KNIGHT, ChessColor.CLR_WHITE));
-                setPiece(7, 0, new Piece(ChessType.TYP_KNIGHT, ChessColor.CLR_WHITE));
-                setPiece(7, 7, new Piece(ChessType.TYP_KNIGHT, ChessColor.CLR_BLACK));
-                setPiece(4, 4, new Piece(ChessType.TYP_KNIGHT, ChessColor.CLR_BLACK));
-                setPiece(5, 1, new Piece(ChessType.TYP_KNIGHT, ChessColor.CLR_BLACK));
-                break;
-            case TYP_BISHOP:
-                setPiece(4, 4, new Piece(ChessType.TYP_BISHOP, ChessColor.CLR_BLACK));
-                setPiece(7, 0, new Piece(ChessType.TYP_BISHOP, ChessColor.CLR_WHITE));
-                setPiece(0, 7, new Piece(ChessType.TYP_BISHOP, ChessColor.CLR_BLACK));
-                setPiece(6, 3, new Piece(ChessType.TYP_BISHOP, ChessColor.CLR_WHITE));
-                setPiece(3, 5, new Piece(ChessType.TYP_BISHOP, ChessColor.CLR_WHITE));
-                setPiece(3, 3, new Piece(ChessType.TYP_BISHOP, ChessColor.CLR_WHITE));
-                setPiece(1, 3, new Piece(ChessType.TYP_BISHOP, ChessColor.CLR_WHITE));
-                setPiece(5, 3, new Piece(ChessType.TYP_BISHOP, ChessColor.CLR_BLACK));
-                break;
-            case TYP_QUEEN:
-                setPiece(4, 4, new Piece(ChessType.TYP_QUEEN, ChessColor.CLR_BLACK));
-                setPiece(7, 0, new Piece(ChessType.TYP_QUEEN, ChessColor.CLR_WHITE));
-                setPiece(0, 7, new Piece(ChessType.TYP_QUEEN, ChessColor.CLR_BLACK));
-                setPiece(6, 3, new Piece(ChessType.TYP_QUEEN, ChessColor.CLR_WHITE));
-                setPiece(3, 5, new Piece(ChessType.TYP_QUEEN, ChessColor.CLR_WHITE));
-                setPiece(3, 3, new Piece(ChessType.TYP_QUEEN, ChessColor.CLR_WHITE));
-                setPiece(1, 3, new Piece(ChessType.TYP_QUEEN, ChessColor.CLR_WHITE));
-                setPiece(5, 3, new Piece(ChessType.TYP_QUEEN, ChessColor.CLR_BLACK));
-                break;
-            case TYP_KING:
-                setPiece(0, 0, new Piece(ChessType.TYP_KING, ChessColor.CLR_BLACK));
-                setPiece(1, 1, new Piece(ChessType.TYP_KING, ChessColor.CLR_BLACK));
-                setPiece(4, 4, new Piece(ChessType.TYP_KING, ChessColor.CLR_BLACK));
-                setPiece(7, 0, new Piece(ChessType.TYP_KING, ChessColor.CLR_WHITE));
-                setPiece(2, 6, new Piece(ChessType.TYP_KING, ChessColor.CLR_BLACK));
-                setPiece(2, 7, new Piece(ChessType.TYP_KING, ChessColor.CLR_WHITE));
-                break;
+                    setPiece(4, 1, new Piece(ChessType.TYP_PAWN, ChessColor.CLR_BLACK));
+                    setPiece(1, 1, new Piece(ChessType.TYP_PAWN, ChessColor.CLR_BLACK));
+                    setPiece(2, 2, new Piece(ChessType.TYP_PAWN, ChessColor.CLR_BLACK));
+                    setPiece(4, 3, new Piece(ChessType.TYP_PAWN, ChessColor.CLR_BLACK));
+                    setPiece(2, 7, new Piece(ChessType.TYP_PAWN, ChessColor.CLR_BLACK));
+                    setPiece(3, 7, new Piece(ChessType.TYP_PAWN, ChessColor.CLR_BLACK));
+                    break;
+                case TYP_ROOK:
+                    setPiece(4, 4, new Piece(ChessType.TYP_ROOK, ChessColor.CLR_BLACK));
+                    setPiece(7, 0, new Piece(ChessType.TYP_ROOK, ChessColor.CLR_WHITE));
+                    setPiece(0, 7, new Piece(ChessType.TYP_ROOK, ChessColor.CLR_BLACK));
+                    setPiece(6, 2, new Piece(ChessType.TYP_ROOK, ChessColor.CLR_BLACK));
+                    setPiece(6, 3, new Piece(ChessType.TYP_ROOK, ChessColor.CLR_WHITE));
+                    setPiece(3, 5, new Piece(ChessType.TYP_ROOK, ChessColor.CLR_WHITE));
+                    setPiece(3, 3, new Piece(ChessType.TYP_ROOK, ChessColor.CLR_WHITE));
+                    setPiece(5, 3, new Piece(ChessType.TYP_ROOK, ChessColor.CLR_BLACK));
+                    break;
+                case TYP_KNIGHT:
+                    setPiece(0, 0, new Piece(ChessType.TYP_KNIGHT, ChessColor.CLR_BLACK));
+                    setPiece(0, 7, new Piece(ChessType.TYP_KNIGHT, ChessColor.CLR_WHITE));
+                    setPiece(2, 6, new Piece(ChessType.TYP_KNIGHT, ChessColor.CLR_WHITE));
+                    setPiece(7, 0, new Piece(ChessType.TYP_KNIGHT, ChessColor.CLR_WHITE));
+                    setPiece(7, 7, new Piece(ChessType.TYP_KNIGHT, ChessColor.CLR_BLACK));
+                    setPiece(4, 4, new Piece(ChessType.TYP_KNIGHT, ChessColor.CLR_BLACK));
+                    setPiece(5, 1, new Piece(ChessType.TYP_KNIGHT, ChessColor.CLR_BLACK));
+                    break;
+                case TYP_BISHOP:
+                    setPiece(4, 4, new Piece(ChessType.TYP_BISHOP, ChessColor.CLR_BLACK));
+                    setPiece(7, 0, new Piece(ChessType.TYP_BISHOP, ChessColor.CLR_WHITE));
+                    setPiece(0, 7, new Piece(ChessType.TYP_BISHOP, ChessColor.CLR_BLACK));
+                    setPiece(6, 3, new Piece(ChessType.TYP_BISHOP, ChessColor.CLR_WHITE));
+                    setPiece(3, 5, new Piece(ChessType.TYP_BISHOP, ChessColor.CLR_WHITE));
+                    setPiece(3, 3, new Piece(ChessType.TYP_BISHOP, ChessColor.CLR_WHITE));
+                    setPiece(1, 3, new Piece(ChessType.TYP_BISHOP, ChessColor.CLR_WHITE));
+                    setPiece(5, 3, new Piece(ChessType.TYP_BISHOP, ChessColor.CLR_BLACK));
+                    break;
+                case TYP_QUEEN:
+                    setPiece(4, 4, new Piece(ChessType.TYP_QUEEN, ChessColor.CLR_BLACK));
+                    setPiece(7, 0, new Piece(ChessType.TYP_QUEEN, ChessColor.CLR_WHITE));
+                    setPiece(0, 7, new Piece(ChessType.TYP_QUEEN, ChessColor.CLR_BLACK));
+                    setPiece(6, 3, new Piece(ChessType.TYP_QUEEN, ChessColor.CLR_WHITE));
+                    setPiece(3, 5, new Piece(ChessType.TYP_QUEEN, ChessColor.CLR_WHITE));
+                    setPiece(3, 3, new Piece(ChessType.TYP_QUEEN, ChessColor.CLR_WHITE));
+                    setPiece(1, 3, new Piece(ChessType.TYP_QUEEN, ChessColor.CLR_WHITE));
+                    setPiece(5, 3, new Piece(ChessType.TYP_QUEEN, ChessColor.CLR_BLACK));
+                    break;
+                case TYP_KING:
+                    setPiece(0, 0, new Piece(ChessType.TYP_KING, ChessColor.CLR_BLACK));
+                    setPiece(1, 1, new Piece(ChessType.TYP_KING, ChessColor.CLR_BLACK));
+                    setPiece(4, 4, new Piece(ChessType.TYP_KING, ChessColor.CLR_BLACK));
+                    setPiece(7, 0, new Piece(ChessType.TYP_KING, ChessColor.CLR_WHITE));
+                    setPiece(2, 6, new Piece(ChessType.TYP_KING, ChessColor.CLR_BLACK));
+                    setPiece(2, 7, new Piece(ChessType.TYP_KING, ChessColor.CLR_WHITE));
+                    break;
+            }
+        }
+        else {
+            setPiece(0, 4, new Piece(ChessType.TYP_KING, ChessColor.CLR_BLACK));
+            setPiece(0, 7, new Piece(ChessType.TYP_ROOK, ChessColor.CLR_BLACK));
+            setPiece(0, 2, new Piece(ChessType.TYP_ROOK, ChessColor.CLR_BLACK));
+            setPiece(7, 4, new Piece(ChessType.TYP_KING, ChessColor.CLR_WHITE));
+            setPiece(7, 7, new Piece(ChessType.TYP_ROOK, ChessColor.CLR_WHITE));
+            setPiece(7, 0, new Piece(ChessType.TYP_ROOK, ChessColor.CLR_WHITE));
+            setPiece(6, 0, new Piece(ChessType.TYP_PAWN, ChessColor.CLR_WHITE));
+            setPiece(6, 1, new Piece(ChessType.TYP_PAWN, ChessColor.CLR_WHITE));
+            setPiece(6, 2, new Piece(ChessType.TYP_PAWN, ChessColor.CLR_WHITE));
+            setPiece(6, 3, new Piece(ChessType.TYP_PAWN, ChessColor.CLR_WHITE));
+            setPiece(6, 4, new Piece(ChessType.TYP_PAWN, ChessColor.CLR_WHITE));
         }
     }
 
@@ -218,6 +234,39 @@ public class Board {
         return this.whitePiecesLost;
     }
 
+    public void movePiece(ChessPosition p0, ChessPosition p1) {
+        Piece piece  = getPiece(p0);
+        Piece target = getPiece(p1);
+
+        // Castling
+        if (piece.getPieceType() == ChessType.TYP_KING && target != null && piece.getPieceColor() == target.getPieceColor()) {
+            int x1;
+            int x2;
+            if (p1.x == 0) {
+                x1 = 2;
+                x2 = 3;
+            }
+            else {
+                x1 = 6;
+                x2 = 5;
+            }
+            setPiece(new ChessPosition(x1, p1.y), piece);
+            setPiece(new ChessPosition(x2, p1.y), target);
+            setPiece(p0, null);
+            setPiece(p1, null);
+        }
+        // Normal
+        else {
+            addLostPiece(target);
+            setPiece(p1, piece);
+            setPiece(p0, null);
+            piece.increaseNbTurn();
+            if (piece.getPieceType() == ChessType.TYP_PAWN && (p1.y == 7 || p1.y == 0)) {
+                setPiece(p1, new Piece(ChessType.TYP_QUEEN, piece.getPieceColor()));
+            }
+        }
+    }
+
     public ChessPosition getPositionOf(Piece piece) {
         for (int line = 0; line < 8; line++) {
             for (int column = 0; column < 8; column++) {
@@ -228,5 +277,46 @@ public class Board {
             }
         }
         return null;
+    }
+
+    public Piece getKing(ChessColor color) {
+        for (int line = 0; line < 8; line++) {
+            for (int column = 0; column < 8; column++) {
+                Piece pieceTested = getPiece(line, column);
+                if (pieceTested != null && pieceTested.getPieceType() == ChessType.TYP_KING && pieceTested.getPieceColor() == color) {
+                    return pieceTested;
+                }
+            }
+        }
+        return null;
+    }
+
+    public ChessKingState getKingState(ChessColor color)  {
+        ChessPosition positionKing = getPositionOf(getKing(color));
+        ChessColor colorEnemy = color == ChessColor.CLR_BLACK ? ChessColor.CLR_WHITE : ChessColor.CLR_BLACK;
+        for (Piece piece : getPiecesColor(colorEnemy)) {
+            List<ChessPosition> moves = piece.getPiecesMoves(getPositionOf(piece), this);
+            for (ChessPosition move : moves) {
+                if (move.x == positionKing.x && move.y == positionKing.y) {
+                    return ChessKingState.KING_THREATEN;
+                }
+            }
+        }
+        return ChessKingState.KING_SAFE;
+    }
+
+    public Board clone() {
+        Board boardTmp = new Board();
+        Piece[][] gameTmp = new Piece[8][8];
+        for (int line = 0; line < 8; line++) {
+            for (int column = 0; column < 8; column++) {
+                Piece pieceTmp = this.getPiece(line, column);
+                if (pieceTmp != null) {
+                    gameTmp[line][column] = pieceTmp.clone();
+                }
+            }
+        }
+        boardTmp.game = gameTmp;
+        return boardTmp;
     }
 }
