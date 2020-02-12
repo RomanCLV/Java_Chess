@@ -24,7 +24,7 @@ public class ChessModel implements IChess {
 
     @Override
     public void reinit() {
-        boolean jeVeuxUnePartieDeTest = true;
+        boolean jeVeuxUnePartieDeTest = false;
         if (jeVeuxUnePartieDeTest) {
             switch (modeBoard) {
                 case 1:
@@ -124,6 +124,24 @@ public class ChessModel implements IChess {
 
     @Override
     public ChessKingState getKingState(ChessColor color) {
+        ChessPosition positionKing = new ChessPosition();
+        for (int line = 0; line < 8; line++) {
+            for (int column = 0; column < 8; column++) {
+                Piece pieceTested = this.game.getPiece(line, column);
+                if (pieceTested != null && pieceTested.getPieceType() == ChessType.TYP_KING && pieceTested.getPieceColor() == color) {
+                    positionKing = new ChessPosition(column, line);
+                }
+            }
+        }
+        ChessColor colorEnemy = color == ChessColor.CLR_BLACK ? ChessColor.CLR_WHITE : ChessColor.CLR_BLACK;
+        for (Piece piece : this.game.getPiecesColor(colorEnemy)) {
+            List<ChessPosition> moves = piece.getPiecesMoves(this.game.getPositionOf(piece), this.game);
+            for (ChessPosition move : moves) {
+                if (move.x == positionKing.x && move.y == positionKing.y) {
+                    return ChessKingState.KING_THREATEN;
+                }
+            }
+        }
         return ChessKingState.KING_SAFE;
     }
 

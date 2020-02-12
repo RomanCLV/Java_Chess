@@ -1,7 +1,6 @@
 package fr.rphstudio.chess.game;
 
 import fr.rphstudio.chess.interf.IChess.*;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -187,14 +186,18 @@ public class Board {
         this.game[line][column] = value;
     }
 
-    public int getNbPieceColor(ChessColor color) {
-        List<Piece> validPieces = new ArrayList<>();
-        for (Piece piece: toArray()) {
+    public List<Piece> getPiecesColor(ChessColor color) {
+        List<Piece> pieces = new ArrayList<>();
+        for (Piece piece : this.toArray()) {
             if (piece != null && piece.getPieceColor() == color) {
-                validPieces.add(piece);
+                pieces.add(piece);
             }
         }
-        return validPieces.size();
+        return pieces;
+    }
+
+    public int getNbPieceColor(ChessColor color) {
+        return getPiecesColor(color).size();
     }
 
     public void addLostPiece(Piece piece) {
@@ -213,5 +216,17 @@ public class Board {
             return this.blackPiecesLost;
         }
         return this.whitePiecesLost;
+    }
+
+    public ChessPosition getPositionOf(Piece piece) {
+        for (int line = 0; line < 8; line++) {
+            for (int column = 0; column < 8; column++) {
+                Piece pieceTested = getPiece(line, column);
+                if (pieceTested == piece) {
+                    return new ChessPosition(column, line);
+                }
+            }
+        }
+        return null;
     }
 }
