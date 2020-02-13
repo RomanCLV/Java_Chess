@@ -18,6 +18,10 @@ fr/rphstudio/chess/game/IMove.class
 fr/rphstudio/chess/game/ChessModel.class
 fr/rphstudio/chess/game/pieces/Bishop.class
 fr/rphstudio/chess/game/Board.class
+<<<<<<< HEAD
+=======
+fr/rphstudio/chess/game/Board$1.class
+>>>>>>> dev
 fr/rphstudio/chess/interf/IChess$ChessPosition.class
 fr/rphstudio/chess/game/Piece$1.class
 fr/rphstudio/chess/game/pieces/Rook.class
