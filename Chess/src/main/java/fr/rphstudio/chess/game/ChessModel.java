@@ -24,33 +24,29 @@ public class ChessModel implements IChess {
 
     @Override
     public void reinit() {
-        if (true) {
-            switch (modeBoard) {
-                case 1:
-                    game = new Board(ChessType.TYP_ROOK);
-                    break;
-                case 2:
-                    game = new Board(ChessType.TYP_KNIGHT);
-                    break;
-                case 3:
-                    game = new Board(ChessType.TYP_BISHOP);
-                    break;
-                case 4:
-                    game = new Board(ChessType.TYP_QUEEN);
-                    break;
-                case 5:
-                    game = new Board(ChessType.TYP_KING);
-                    break;
-                default:
-                    modeBoard = 0;
-                    game = new Board(ChessType.TYP_PAWN);
-                    break;
-            }
-            modeBoard++;
+        boolean jeVeuxUnePartieDeTest = true;
+        switch (modeBoard) {
+            case 1:
+                game = new Board(ChessType.TYP_ROOK);
+                break;
+            case 2:
+                game = new Board(ChessType.TYP_KNIGHT);
+                break;
+            case 3:
+                game = new Board(ChessType.TYP_BISHOP);
+                break;
+            case 4:
+                game = new Board(ChessType.TYP_QUEEN);
+                break;
+            case 5:
+                game = new Board(ChessType.TYP_KING);
+                break;
+            default:
+                modeBoard = 0;
+                game = new Board(ChessType.TYP_PAWN);
+                break;
         }
-        else {
-            game = new Board();
-        }
+        modeBoard++;
     }
 
     @Override
