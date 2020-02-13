@@ -13,17 +13,22 @@
       <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-windows/Chess-1.6.79/Chess-1.6.79.exe" beforeDir="false" afterPath="$PROJECT_DIR$/target/Chess-1.6.79-release-windows/Chess-1.6.79/Chess-1.6.79.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79.exe" beforeDir="false" afterPath="$PROJECT_DIR$/target/Chess-1.6.79.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/Chess-1.6.79.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.1550499560.tmp/game.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.1550499560.tmp/game.sh.331855294.filtered" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.1620703931.tmp/game.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.1620703931.tmp/game.sh.1931219748.filtered" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.2127412985.tmp/game.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.2127412985.tmp/game.sh.1448101896.filtered" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.822953276.tmp/game.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.822953276.tmp/game.sh.1081988354.filtered" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.1046716244.tmp/game.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.1046716244.tmp/game.sh.266157404.filtered" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.1234998495.tmp/game.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.1234998495.tmp/game.sh.1644650348.filtered" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.1344114951.tmp/game.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.1344114951.tmp/game.sh.558746743.filtered" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.385616802.tmp/game.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.385616802.tmp/game.sh.213155861.filtered" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/fr/rphstudio/chess/game/Board.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/rphstudio/chess/game/Board.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/fr/rphstudio/chess/game/ChessModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/rphstudio/chess/game/ChessModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/rphstudio/chess/game/Piece.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/rphstudio/chess/game/Piece.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/rphstudio/chess/game/pieces/Pawn.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/rphstudio/chess/game/pieces/Pawn.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/rphstudio/chess/launcher/MainLauncher.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/rphstudio/chess/launcher/MainLauncher.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,6 +108,8 @@
       <workItem from="1581367555221" duration="4917000" />
       <workItem from="1581373201256" duration="5825000" />
       <workItem from="1581519359386" duration="2639000" />
+      <workItem from="1581604399034" duration="1337000" />
+      <workItem from="1581605919522" duration="2868000" />
     </task>
     <servers />
   </component>
@@ -125,25 +132,25 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="636" y="267" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1440.900@0.0.1440.900" timestamp="1581330469004" />
-    <state width="1398" height="311" key="GridCell.Tab.0.bottom" timestamp="1581523667835">
+    <state width="699" height="311" key="GridCell.Tab.0.bottom" timestamp="1581608932577">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="311" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1581523667835" />
+    <state width="699" height="311" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1581608932577" />
     <state width="1398" height="268" key="GridCell.Tab.0.bottom/0.23.1440.816@0.23.1440.816" timestamp="1581519278526" />
-    <state width="1398" height="311" key="GridCell.Tab.0.center" timestamp="1581523667834">
+    <state width="699" height="311" key="GridCell.Tab.0.center" timestamp="1581608932576">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="311" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1581523667834" />
+    <state width="699" height="311" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1581608932576" />
     <state width="1398" height="268" key="GridCell.Tab.0.center/0.23.1440.816@0.23.1440.816" timestamp="1581519278525" />
-    <state width="1398" height="311" key="GridCell.Tab.0.left" timestamp="1581523667833">
+    <state width="699" height="311" key="GridCell.Tab.0.left" timestamp="1581608932575">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="311" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1581523667833" />
+    <state width="699" height="311" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1581608932575" />
     <state width="1398" height="268" key="GridCell.Tab.0.left/0.23.1440.816@0.23.1440.816" timestamp="1581519278525" />
-    <state width="1398" height="311" key="GridCell.Tab.0.right" timestamp="1581523667835">
+    <state width="699" height="311" key="GridCell.Tab.0.right" timestamp="1581608932576">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="311" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1581523667834" />
+    <state width="699" height="311" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1581608932576" />
     <state width="1398" height="268" key="GridCell.Tab.0.right/0.23.1440.816@0.23.1440.816" timestamp="1581519278526" />
     <state width="1398" height="303" key="GridCell.Tab.1.bottom" timestamp="1581365900111">
       <screen x="0" y="0" width="1440" height="900" />
@@ -161,5 +168,9 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1398" height="303" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1581365900110" />
+    <state x="426" y="63" key="refactoring.ChangeSignatureDialog" timestamp="1581608710438">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="426" y="63" key="refactoring.ChangeSignatureDialog/0.0.1440.900@0.0.1440.900" timestamp="1581608710438" />
   </component>
 </project>

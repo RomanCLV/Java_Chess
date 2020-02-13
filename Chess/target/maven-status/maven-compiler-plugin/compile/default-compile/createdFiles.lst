@@ -2,6 +2,7 @@ fr/rphstudio/chess/launcher/ChessFontManager$LetterInfo.class
 fr/rphstudio/chess/interf/IChess$ChessColor.class
 fr/rphstudio/chess/launcher/ChessFontManager.class
 fr/rphstudio/chess/interf/IChess.class
+fr/rphstudio/chess/game/ChessTimer.class
 fr/rphstudio/chess/launcher/MainLauncher.class
 fr/rphstudio/chess/game/Piece.class
 fr/rphstudio/chess/interf/IChess$ChessType.class
