@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="258304dd-c7fe-4be5-91ee-6f1edd5ea2e5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/pieces.uml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/ChessModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/ChessModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/IMove.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/IMove.java" afterDir="false" />
@@ -93,7 +94,7 @@
       <workItem from="1581519359386" duration="2639000" />
       <workItem from="1581604399034" duration="1337000" />
       <workItem from="1581605919522" duration="2868000" />
-      <workItem from="1581610493437" duration="1564000" />
+      <workItem from="1581610493437" duration="1645000" />
     </task>
     <servers />
   </component>
