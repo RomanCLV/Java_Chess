@@ -53,6 +53,10 @@ public class Piece {
         this.nbTurns = value;
     }
 
+    public int getNbTurns() {
+        return this.nbTurns;
+    }
+
     public List<ChessPosition> getPiecesMoves (ChessPosition p, Board board) {
         List<ChessPosition> moves = this.move.getPossibleMoves(p, board);
 

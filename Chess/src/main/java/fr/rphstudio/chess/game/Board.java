@@ -13,10 +13,16 @@ public class Board {
 
     private List<ChessType> whitePiecesLost;
     private List<ChessType> blackPiecesLost;
+    private Piece lastPieceMoved;
+
+    private ChessTimer timer;
 
     public Board() {
         whitePiecesLost = new ArrayList<>();
         blackPiecesLost = new ArrayList<>();
+        lastPieceMoved = null;
+        this.timer = new ChessTimer();
+
         this.game = new Piece[8][];
         for (int line = 0; line < 8; line++) {
             this.game[line] = new Piece[8];
@@ -27,6 +33,8 @@ public class Board {
     public Board(int mode) {
         whitePiecesLost = new ArrayList<>();
         blackPiecesLost = new ArrayList<>();
+        lastPieceMoved = null;
+        this.timer = new ChessTimer();
 
         this.game = new Piece[8][];
         for (int line = 0; line < 8; line++) {
@@ -37,7 +45,6 @@ public class Board {
                 this.game[line][column] = null;
             }
         }
-
         switch (mode) {
             case 0:
                 setPiece(0, 0, new Piece(ChessType.TYP_KING, ChessColor.CLR_BLACK));
@@ -279,6 +286,11 @@ public class Board {
                 setPiece(p1, new Piece(ChessType.TYP_QUEEN, piece.getPieceColor()));
             }
         }
+        setLastPieceMoved(piece);
+        /*System.out.println("setLast : \npiece : " + piece + "\nlast  : " + this.lastPieceMoved);
+        System.out.println("pos : \npiece : " + getPositionOf(piece) + " : " + getPositionOf(piece).x + " | " + getPositionOf(piece).y);
+        System.out.println("last  : " + getPositionOf(this.lastPieceMoved) + " : " + getPositionOf(this.lastPieceMoved).x + " | " + getPositionOf(this.lastPieceMoved).y);
+        System.out.println("set Done");*/
     }
 
     public ChessPosition getPositionOf(Piece piece) {
@@ -333,6 +345,18 @@ public class Board {
         return null;
     }
 
+    public Piece getLastPieceMoved() {
+        return this.lastPieceMoved;
+    }
+
+    public void setLastPieceMoved(Piece value) {
+        this.lastPieceMoved = value;
+    }
+
+    public long getTime(ChessColor color, boolean whiteIsPlaying) {
+        return this.timer.getTime(color, whiteIsPlaying);
+    }
+
     public Board clone() {
         Board boardTmp = new Board();
         Piece[][] gameTmp = new Piece[8][8];
@@ -347,7 +371,7 @@ public class Board {
         boardTmp.game = gameTmp;
         boardTmp.whitePiecesLost = new ArrayList<>(whitePiecesLost);
         boardTmp.blackPiecesLost = new ArrayList<>(blackPiecesLost);
-
+        boardTmp.timer = this.timer.clone();
         return boardTmp;
     }
 }

@@ -13,9 +13,10 @@ public class ChessModel implements IChess {
     private boolean modeTesting;
     private int modeBoard;
 
+
     private ChessModel() {
         this.boardPath = "../../../resources/sprites/board2.png";
-        this.modeTesting = true;
+        this.modeTesting = false;
         this.modeBoard = 0;
     }
 
@@ -110,6 +111,7 @@ public class ChessModel implements IChess {
     public boolean undoLastMove() {
         Board boardTmp = this.game.returnLastState();
         if (boardTmp != null) {
+
             this.game = boardTmp;
             return true;
         }
@@ -121,6 +123,6 @@ public class ChessModel implements IChess {
 
     @Override
     public long getPlayerDuration(ChessColor color, boolean isPlaying) {
-        return 0;
+        return this.game.getTime(color, isPlaying);
     }
 }
