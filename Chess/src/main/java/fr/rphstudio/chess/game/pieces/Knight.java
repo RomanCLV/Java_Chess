@@ -8,6 +8,12 @@ import java.util.List;
 
 public class Knight implements IMove {
 
+    /**
+     * Get the possible moves
+     * @param p The piece
+     * @param board The board
+     * @return A list of position
+     */
     @Override
     public List<ChessPosition> getPossibleMoves(ChessPosition p, Board board) {
         List<ChessPosition> positions = new ArrayList<>();
@@ -58,11 +64,24 @@ public class Knight implements IMove {
         return positions;
     }
 
-    // check if the case is in the square (0 ; 8)
+    /**
+     * Check if the case is in the square (0 ; 7)
+     * @param line The line
+     * @param column The column
+     * @return A boolean
+     */
     private boolean validPosition(int line, int column) {
         return line >= 0 && line < 8 && column >= 0 && column < 8;
     }
 
+    /**
+     * Check if can add the position to a knight move
+     * @param board The board
+     * @param p Piece's position
+     * @param line The line
+     * @param column The column
+     * @return A boolean
+     */
     private boolean isValidCase(Board board, ChessPosition p, int line, int column) {
         ChessColor color = board.getPiece(p).getPieceColor();
         if (validPosition(line, column)) {

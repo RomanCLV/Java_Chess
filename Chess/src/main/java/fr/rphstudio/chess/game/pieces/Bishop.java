@@ -8,8 +8,18 @@ import fr.rphstudio.chess.interf.IChess.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Bishop Class implements IMove
+ * @see #getPossibleMoves
+ */
 public class Bishop  implements IMove {
 
+    /**
+     * Get the possible moves
+     * @param p The piece
+     * @param board The board
+     * @return A list of position
+     */
     @Override
     public List<ChessPosition> getPossibleMoves(ChessPosition p, Board board) {
         List<ChessPosition> positions = new ArrayList<>();
