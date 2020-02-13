@@ -9,7 +9,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Bishop  implements IMove {
-
+    /**
+     * possible move moves of bishop
+     * @param board game board
+     * @return return final position
+     */
     @Override
     public List<ChessPosition> getPossibleMoves(ChessPosition p, Board board) {
         List<ChessPosition> positions = new ArrayList<>();

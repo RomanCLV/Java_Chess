@@ -9,7 +9,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class King implements IMove {
-
+    /**
+     * possible move moves of bishop
+     @param board game board
+      * @return return final position
+     */
     @Override
     public List<ChessPosition> getPossibleMoves(ChessPosition p, Board board) {
         List<ChessPosition> positions = new ArrayList<>();
@@ -65,6 +69,12 @@ public class King implements IMove {
         return positions;
     }
 
+    /**
+     * check if we can move the king
+     * @param line
+     * @param column
+     * @return return position possible
+     */
     private boolean validPosition(int line, int column) {
         return line >= 0 && line < 8 && column >= 0 && column < 8;
     }
