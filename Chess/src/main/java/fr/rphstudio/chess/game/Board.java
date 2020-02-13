@@ -1,10 +1,18 @@
 package fr.rphstudio.chess.game;
 
 import fr.rphstudio.chess.interf.IChess.*;
-
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Board Class
+ * @see #states : a public static List<Board>
+ * @see #game : a private Piece[][]
+ * @see #whitePiecesLost : a private List<ChessType>
+ * @see #blackPiecesLost : a private List<ChessType>
+ * @see #lastPieceMoved : a private Piece
+ * @see #timer : a private ChessTimer
+ */
 public class Board {
 
     private static List<Board> states = new ArrayList<Board>();
@@ -17,6 +25,9 @@ public class Board {
 
     private ChessTimer timer;
 
+    /**
+     * Constructor
+     */
     public Board() {
         whitePiecesLost = new ArrayList<>();
         blackPiecesLost = new ArrayList<>();
@@ -30,7 +41,11 @@ public class Board {
         createBoardGame();
     }
 
-    public Board(int mode) {
+    /**
+     * Constructor
+     * @param mode : a short to create a Board with specific options
+     */
+    public Board(short mode) {
         whitePiecesLost = new ArrayList<>();
         blackPiecesLost = new ArrayList<>();
         lastPieceMoved = null;
@@ -156,6 +171,9 @@ public class Board {
         }
     }
 
+    /**
+     * Create the default board, called by constructor()
+     */
     private void createBoardGame() {
         for (int line = 0; line < 8; line++) {
             for (int column = 0; column < 8; column++) {
@@ -196,6 +214,10 @@ public class Board {
         }
     }
 
+    /**
+     * Concat all game's (Piece[][]) array into a array
+     * @return a Piece[]
+     */
     public Piece[] toArray() {
         Piece[] pieces = new Piece[64];
         for (int i = 0; i < 8; i++) {
@@ -206,24 +228,51 @@ public class Board {
         return pieces;
     }
 
+    /**
+     * Get a Piece from a position
+     * @param p the position (x, y)
+     * @return a Piece if it exists or null
+     */
     public Piece getPiece(ChessPosition p) {
         if (p.x < 0 || p.x > 7 || p.y < 0 || p.y > 7)
             return null;
         return getPiece(p.y, p.x);
     }
 
+    /**
+     * Get a Piece with two integers
+     * @param line The line (0 ; 7)
+     * @param column The column (0 ; 7)
+     * @return a Piece
+     */
     public Piece getPiece(int line, int column) {
         return this.game[line][column];
     }
 
+    /**
+     * Set a Piece
+     * @param p The Piece's position
+     * @param value a Piece
+     */
     public void setPiece(ChessPosition p, Piece value) {
         setPiece(p.y, p.x, value);
     }
 
+    /**
+     * Set a Piece
+     * @param line The line (0 ; 7)
+     * @param column The column (0 ; 7)
+     * @param value A Piece
+     */
     public void setPiece(int line, int column, Piece value) {
         this.game[line][column] = value;
     }
 
+    /**
+     * Get all pieces of a color
+     * @param color The color
+     * @return The list List<Piece>
+     */
     public List<Piece> getPiecesColor(ChessColor color) {
         List<Piece> pieces = new ArrayList<>();
         for (Piece piece : this.toArray()) {
@@ -234,10 +283,19 @@ public class Board {
         return pieces;
     }
 
+    /**
+     * Give the number of pieces of a color
+     * @param color The color
+     * @return The number
+     */
     public int getNbPieceColor(ChessColor color) {
         return getPiecesColor(color).size();
     }
 
+    /**
+     * Add a part to the list of eaten pieces
+     * @param piece The Piece
+     */
     public void addLostPiece(Piece piece) {
         if (piece != null) {
             if (piece.getPieceColor() == ChessColor.CLR_WHITE) {
@@ -248,6 +306,11 @@ public class Board {
         }
     }
 
+    /**
+     * Get the eaten pieces
+     * @param color The color of the pieces
+     * @return A list
+     */
     public List<ChessType> getPiecesLost(ChessColor color) {
         if (color == ChessColor.CLR_BLACK) {
             return this.blackPiecesLost;
@@ -255,6 +318,11 @@ public class Board {
         return this.whitePiecesLost;
     }
 
+    /**
+     * Move a piece to a position
+     * @param p0 The original position
+     * @param p1 The targeted position
+     */
     public void movePiece(ChessPosition p0, ChessPosition p1) {
         Piece piece = getPiece(p0);
         Piece target = getPiece(p1);
@@ -293,6 +361,11 @@ public class Board {
         System.out.println("set Done");*/
     }
 
+    /**
+     * Get the position of a piece
+     * @param piece The piece
+     * @return Its position
+     */
     public ChessPosition getPositionOf(Piece piece) {
         for (int line = 0; line < 8; line++) {
             for (int column = 0; column < 8; column++) {
@@ -305,6 +378,11 @@ public class Board {
         return null;
     }
 
+    /**
+     * Get the king of a color
+     * @param color The king's color
+     * @return A Piece, specifically a King
+     */
     public Piece getKing(ChessColor color) {
         for (int line = 0; line < 8; line++) {
             for (int column = 0; column < 8; column++) {
@@ -317,6 +395,11 @@ public class Board {
         return null;
     }
 
+    /**
+     * Get the state of a king of a color
+     * @param color The king's color
+     * @return The state
+     */
     public ChessKingState getKingState(ChessColor color) {
         ChessPosition positionKing = getPositionOf(getKing(color));
         ChessColor colorEnemy = color == ChessColor.CLR_BLACK ? ChessColor.CLR_WHITE : ChessColor.CLR_BLACK;
@@ -331,10 +414,18 @@ public class Board {
         return ChessKingState.KING_SAFE;
     }
 
+    /**
+     * Add a state of the board
+     * @param newState The board to save
+     */
     public void addState(Board newState) {
         states.add(newState);
     }
 
+    /**
+     * Return the last state of the board
+     * @return The last Board
+     */
     public Board returnLastState() {
         if (states.size() > 0) {
             int lastIndex = states.size() - 1;
@@ -345,18 +436,36 @@ public class Board {
         return null;
     }
 
+    /**
+     * Returns the last piece that moved
+     * @return A Piece
+     */
     public Piece getLastPieceMoved() {
         return this.lastPieceMoved;
     }
 
+    /**
+     * Set the last piece that moved
+     * @param value The Piece
+     */
     public void setLastPieceMoved(Piece value) {
         this.lastPieceMoved = value;
     }
 
-    public long getTime(ChessColor color, boolean whiteIsPlaying) {
-        return this.timer.getTime(color, whiteIsPlaying);
+    /**
+     * Get the player's time
+     * @param color The player's color
+     * @param isPlaying The player's state
+     * @return The time in milliseconds
+     */
+    public long getTime(ChessColor color, boolean isPlaying) {
+        return this.timer.getTime(color, isPlaying);
     }
 
+    /**
+     * Get a copy of the current Board
+     * @return A Board
+     */
     public Board clone() {
         Board boardTmp = new Board();
         Piece[][] gameTmp = new Piece[8][8];

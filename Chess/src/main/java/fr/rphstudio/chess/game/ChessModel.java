@@ -11,7 +11,7 @@ public class ChessModel implements IChess {
     public String boardPath;
     private Board game;
     private boolean modeTesting;
-    private int modeBoard;
+    private short modeBoard;
 
 
     private ChessModel() {
