@@ -4,6 +4,14 @@ import fr.rphstudio.chess.interf.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * ChessModel Class
+ * @see #ChessModel
+ * @see #boardPath
+ * @see #game
+ * @see #modeTesting
+ * @see #modeBoard
+ */
 public class ChessModel implements IChess {
 
     private static ChessModel instance = new ChessModel();
@@ -11,10 +19,11 @@ public class ChessModel implements IChess {
     public String boardPath;
     private Board game;
     private boolean modeTesting;
-    private int modeBoard;
+
+    private short modeBoard;
 
     /**
-     * chess model
+     * Constructor
      */
     private ChessModel() {
         this.boardPath = "../../../resources/sprites/board2.png";
@@ -23,15 +32,15 @@ public class ChessModel implements IChess {
     }
 
     /**
-     * instance
-     * @return new chess model
+     * Get the instance (singleton)
+     * @return
      */
     public static ChessModel getInstance() {
         return instance;
     }
 
     /**
-     * reinit the game
+     * Initialisation of the game
      */
     @Override
     public void reinit() {
@@ -48,9 +57,9 @@ public class ChessModel implements IChess {
     }
 
     /**
-     * type of piece of position p
+     * Get the type of a piece
      * @param p x/y position on the board where we want to get the piece type.
-     * @return type of piece
+     * @return The type
      * @throws EmptyCellException
      * @throws OutOfBoardException
      */
@@ -64,9 +73,9 @@ public class ChessModel implements IChess {
     }
 
     /**
-     * color of piece of position p
+     * Get the color of a piece
      * @param p x/y position on the board where we want to get the piece color.
-     * @return color of piece
+     * @return The color
      * @throws EmptyCellException
      * @throws OutOfBoardException
      */
@@ -80,9 +89,9 @@ public class ChessModel implements IChess {
     }
 
     /**
-     * all pieces of the color
-     * @param color the requested color of the pieces to count.
-     * @return all pieces of the color
+     * Give the number of pieces of a color
+     * @param color The color
+     * @return The number
      */
     @Override
     public int getNbRemainingPieces(ChessColor color) {
@@ -90,9 +99,9 @@ public class ChessModel implements IChess {
     }
 
     /**
-     * valid moves of piece
+     * Get a list of possible position of a piece
      * @param p requested piece position.
-     * @return list of valid moves
+     * @return
      */
     @Override
     public List<ChessPosition> getPieceMoves(ChessPosition p) {
@@ -124,7 +133,7 @@ public class ChessModel implements IChess {
     }
 
     /**
-     * move piece
+     * Move a piece
      * @param p0 source position on the board.
      * @param p1 destination position on the board.
      */
@@ -136,9 +145,9 @@ public class ChessModel implements IChess {
     }
 
     /**
-     * if king is check
+     * Get the state of a king
      * @param color the requested king color.
-     * @return color if king is check
+     * @return
      */
     @Override
     public ChessKingState getKingState(ChessColor color) {
@@ -146,9 +155,9 @@ public class ChessModel implements IChess {
     }
 
     /**
-     * piece removed
+     * Get the eaten pieces
      * @param color color of the removed pieces
-     * @return list of removed piece
+     * @return
      */
     @Override
     public List<ChessType> getRemovedPieces(ChessColor color) {
@@ -156,8 +165,8 @@ public class ChessModel implements IChess {
     }
 
     /**
-     * back to back
-     * @return boolean is board in the list
+     * Return to the last state of board
+     * @return change the player
      */
     @Override
     public boolean undoLastMove() {
@@ -174,10 +183,10 @@ public class ChessModel implements IChess {
     }
 
     /**
-     * timer
+     * Get the player's time
      * @param color The color of the player from whom we want to get the current duration.
      * @param isPlaying Indicates if the player color is the one currently playing.
-     * @return time of color is playing
+     * @return
      */
     @Override
     public long getPlayerDuration(ChessColor color, boolean isPlaying) {

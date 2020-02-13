@@ -10,6 +10,12 @@ import java.util.List;
 
 public class King implements IMove {
 
+    /**
+     * Get the possible moves
+     * @param p The piece
+     * @param board The board
+     * @return A list of position
+     */
     @Override
     public List<ChessPosition> getPossibleMoves(ChessPosition p, Board board) {
         List<ChessPosition> positions = new ArrayList<>();
@@ -65,6 +71,12 @@ public class King implements IMove {
         return positions;
     }
 
+    /**
+     * Check if the case is in the square (0 ; 7)
+     * @param line The line
+     * @param column The column
+     * @return A boolean
+     */
     private boolean validPosition(int line, int column) {
         return line >= 0 && line < 8 && column >= 0 && column < 8;
     }

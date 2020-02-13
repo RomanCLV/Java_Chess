@@ -15,12 +15,11 @@ import java.util.List;
 public class Pawn implements IMove {
 
     /**
-     * search for possible movement
-     * @param p position x and y
-     * @param board board game
-     * @return all the possible movement
+     * Get the possible moves
+     * @param p The piece
+     * @param board The board
+     * @return A list of position
      */
-
     @Override
     public List<ChessPosition> getPossibleMoves(ChessPosition p, Board board) {
         List<ChessPosition> positions = new ArrayList<>();

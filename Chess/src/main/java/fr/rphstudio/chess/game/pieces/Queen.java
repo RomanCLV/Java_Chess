@@ -14,10 +14,10 @@ import java.util.List;
 public class Queen  implements IMove {
 
     /**
-     * give the possible movements
-     * @param p position
-     * @param board board game
-     * @return all possible positions
+     * Get the possible moves
+     * @param p The piece
+     * @param board The board
+     * @return A list of position
      */
     @Override
     public List<ChessPosition> getPossibleMoves(ChessPosition p, Board board) {
