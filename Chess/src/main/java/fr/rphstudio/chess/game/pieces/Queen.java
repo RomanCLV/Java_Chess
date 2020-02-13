@@ -8,8 +8,17 @@ import fr.rphstudio.chess.interf.IChess.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * queen class implements IMove
+ */
 public class Queen  implements IMove {
 
+    /**
+     * give the possible movements
+     * @param p position
+     * @param board board game
+     * @return all possible positions
+     */
     @Override
     public List<ChessPosition> getPossibleMoves(ChessPosition p, Board board) {
         List<ChessPosition> positions = new ArrayList<>();
