@@ -24,8 +24,7 @@ public class ChessModel implements IChess {
 
     @Override
     public void reinit() {
-        boolean jeVeuxUnePartieDeTest = true;
-        if (jeVeuxUnePartieDeTest) {
+        if (true) {
             switch (modeBoard) {
                 case 1:
                     game = new Board(ChessType.TYP_ROOK);
@@ -81,50 +80,28 @@ public class ChessModel implements IChess {
     public List<ChessPosition> getPieceMoves(ChessPosition p) {
         Piece piece = this.game.getPiece(p);
         if (piece != null) {
-            return piece.getPiecesMoves(p, this.game);
+            List<ChessPosition> moves = piece.getPiecesMoves(p, this.game);
+            List<ChessPosition> validMoves = new ArrayList<>();
+            for (ChessPosition position : moves) {
+                Board boardTmp = this.game.clone();
+                boardTmp.movePiece(p, position);
+                if (boardTmp.getKingState(piece.getPieceColor()) == ChessKingState.KING_SAFE) {
+                    validMoves.add(position);
+                }
+            }
+            return validMoves;
         }
         return new ArrayList<>();
     }
 
     @Override
     public void movePiece(ChessPosition p0, ChessPosition p1) {
-        Piece piece  = this.game.getPiece(p0);
-        Piece target = this.game.getPiece(p1);
-
-        if (piece.getPieceType() == ChessType.TYP_KING && target != null && piece.getPieceColor() == target.getPieceColor()) {
-            int x1;
-            int x2;
-            if (p1.x == 0) {
-                x1 = 2;
-                x2 = 3;
-            }
-            else {
-                x1 = 6;
-                x2 = 5;
-            }
-            this.game.setPiece(new ChessPosition(x1, p1.y), piece);
-            this.game.setPiece(new ChessPosition(x2, p1.y), target);
-            this.game.setPiece(p0, null);
-            this.game.setPiece(p1, null);
-        }
-        else {
-            this.game.addLostPiece(this.game.getPiece(p1));
-            this.game.setPiece(p1, piece);
-            this.game.setPiece(p0, null);
-            piece.increaseNbTurn();
-            if (piece.getPieceType() == ChessType.TYP_PAWN)
-            {
-                if (p1.y == 7 || p1.y == 0) {
-                    Piece queen = new Piece(ChessType.TYP_QUEEN, piece.getPieceColor());
-                    this.game.setPiece(p1, queen);
-                }
-            }
-        }
+        this.game.movePiece(p0, p1);
     }
 
     @Override
     public ChessKingState getKingState(ChessColor color) {
-        return ChessKingState.KING_SAFE;
+        return this.game.getKingState(color);
     }
 
     @Override
@@ -134,7 +111,6 @@ public class ChessModel implements IChess {
 
     @Override
     public boolean undoLastMove() {
-        reinit(); // a supprimer quand on fera la vraie methode
         return true;
     }
 
