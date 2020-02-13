@@ -10,12 +10,13 @@ public class ChessModel implements IChess {
     
     public String boardPath;
     private Board game;
-
-    private int modeBoard; // a supprimer quand on fera le retour coup d'avant
+    private boolean modeTesting;
+    private int modeBoard;
 
     private ChessModel() {
         this.boardPath = "../../../resources/sprites/board2.png";
-        //this.game = new Board(); // pas besoin car reinit est appele des le debut
+        this.modeTesting = true;
+        this.modeBoard = 0;
     }
 
     public static ChessModel getInstance() {
@@ -24,29 +25,12 @@ public class ChessModel implements IChess {
 
     @Override
     public void reinit() {
-        if (true) {
-            switch (modeBoard) {
-                case 1:
-                    game = new Board(ChessType.TYP_ROOK);
-                    break;
-                case 2:
-                    game = new Board(ChessType.TYP_KNIGHT);
-                    break;
-                case 3:
-                    game = new Board(ChessType.TYP_BISHOP);
-                    break;
-                case 4:
-                    game = new Board(ChessType.TYP_QUEEN);
-                    break;
-                case 5:
-                    game = new Board(ChessType.TYP_KING);
-                    break;
-                default:
-                    modeBoard = 0;
-                    game = new Board(ChessType.TYP_PAWN);
-                    break;
-            }
+        if (this.modeTesting) {
+            this.game = new Board(modeBoard);
             modeBoard++;
+            if (modeBoard > 9) {
+                modeBoard = 0;
+            }
         }
         else {
             game = new Board();
@@ -107,6 +91,7 @@ public class ChessModel implements IChess {
 
     @Override
     public void movePiece(ChessPosition p0, ChessPosition p1) {
+
         this.game.addState(this.game.clone());
         this.game.movePiece(p0, p1);
     }
