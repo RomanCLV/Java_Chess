@@ -6,8 +6,17 @@ import fr.rphstudio.chess.interf.IChess.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * rook class implements IMove
+ */
 public class Rook  implements IMove {
 
+    /**
+     * give the possible position
+     * @param p position
+     * @param board board game
+     * @return all possible positions
+     */
     @Override
     public List<ChessPosition> getPossibleMoves(ChessPosition p, Board board) {
         List<ChessPosition> positions = new ArrayList<>();
