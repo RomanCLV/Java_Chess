@@ -2,6 +2,10 @@ package fr.rphstudio.chess.game;
 
 import fr.rphstudio.chess.interf.IChess.*;
 
+/**
+ * ChessTimer Class
+ */
+
 public class ChessTimer {
 
     private long timeStart;
@@ -10,6 +14,9 @@ public class ChessTimer {
     private boolean whiteIsPlaying;
     private long timeSwitch;
 
+    /**
+     * watcher for getTime function
+     */
     public ChessTimer() {
         this.timeStart = System.currentTimeMillis();
         this.timeStoppedWhite = 0;
@@ -18,6 +25,12 @@ public class ChessTimer {
         this.timeSwitch = timeStart;
     }
 
+    /**
+     * stop the time each time a team played
+     * @param color color of the piece
+     * @param isPlaying use to see which color is playing
+     * @return the time played by both team
+     */
     public long getTime(ChessColor color, boolean isPlaying) {
         if (whiteIsPlaying != isPlaying) {
             if (whiteIsPlaying) {
@@ -38,6 +51,10 @@ public class ChessTimer {
         }
     }
 
+    /**
+     * copy the time at each new move to give back the good time when undo a move
+     * @return the timer time
+     */
     public ChessTimer clone() {
         ChessTimer timerTmp = new ChessTimer();
         timerTmp.timeStart = this.timeStart;
