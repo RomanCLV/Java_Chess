@@ -35,7 +35,7 @@ public class ChessModel implements IChess {
      * Get the instance (singleton)
      * @return
      */
-    public static ChessModel getInstance() {
+     public static ChessModel getInstance() {
         return instance;
     }
 
