@@ -3,60 +3,68 @@
   <ID>JAVA</ID>
   <OriginalElement>fr.rphstudio.chess.game.pieces</OriginalElement>
   <nodes>
-    <node x="-178.0" y="108.0">fr.rphstudio.chess.game.pieces.Pawn</node>
-    <node x="52.0" y="182.0">fr.rphstudio.chess.game.Piece</node>
-    <node x="-82.0" y="108.0">fr.rphstudio.chess.game.pieces.Rook</node>
-    <node x="227.0" y="108.0">fr.rphstudio.chess.game.pieces.Knight</node>
-    <node x="14.0" y="108.0">fr.rphstudio.chess.game.pieces.Bishop</node>
-    <node x="-274.0" y="182.0">fr.rphstudio.chess.game.ChessTimer</node>
-    <node x="-34.0" y="19.0">fr.rphstudio.chess.game.IMove</node>
-    <node x="124.0" y="108.0">fr.rphstudio.chess.game.pieces.Queen</node>
-    <node x="180.0" y="182.0">fr.rphstudio.chess.game.Board</node>
-    <node x="-274.0" y="108.0">fr.rphstudio.chess.game.pieces.King</node>
-    <node x="-111.0" y="182.0">fr.rphstudio.chess.game.ChessModel</node>
+    <node x="0.0" y="843.0">fr.rphstudio.chess.game.pieces.Pawn</node>
+    <node x="817.0" y="0.0">fr.rphstudio.chess.game.Piece</node>
+    <node x="928.0" y="843.0">fr.rphstudio.chess.game.pieces.Rook</node>
+    <node x="1856.0" y="821.0">fr.rphstudio.chess.game.pieces.Knight</node>
+    <node x="1392.0" y="843.0">fr.rphstudio.chess.game.pieces.Bishop</node>
+    <node x="1295.0" y="0.0">fr.rphstudio.chess.game.ChessTimer</node>
+    <node x="2320.0" y="843.0">fr.rphstudio.chess.game.pieces.Queen</node>
+    <node x="1160.0" y="708.0">fr.rphstudio.chess.game.IMove</node>
+    <node x="0.0" y="0.0">fr.rphstudio.chess.game.Board</node>
+    <node x="464.0" y="832.0">fr.rphstudio.chess.game.pieces.King</node>
+    <node x="391.0" y="0.0">fr.rphstudio.chess.game.ChessModel</node>
   </nodes>
   <notes />
   <edges>
     <edge source="fr.rphstudio.chess.game.pieces.Bishop" target="fr.rphstudio.chess.game.IMove">
-      <point x="0.0" y="-14.5" />
-      <point x="59.0" y="88.0" />
-      <point x="14.416666666666686" y="88.0" />
-      <point x="6.916666666666686" y="14.5" />
-    </edge>
-    <edge source="fr.rphstudio.chess.game.pieces.King" target="fr.rphstudio.chess.game.IMove">
-      <point x="0.0" y="-14.5" />
-      <point x="-236.0" y="68.0" />
-      <point x="-27.083333333333314" y="68.0" />
-      <point x="-34.583333333333314" y="14.5" />
-    </edge>
-    <edge source="fr.rphstudio.chess.game.pieces.Pawn" target="fr.rphstudio.chess.game.IMove">
-      <point x="0.0" y="-14.5" />
-      <point x="-140.0" y="78.0" />
-      <point x="-13.25" y="78.0" />
-      <point x="-20.75" y="14.5" />
+      <point x="0.0" y="-26.5" />
+      <point x="1614.0" y="801.0" />
+      <point x="1419.0" y="801.0" />
+      <point x="37.0" y="26.5" />
     </edge>
     <edge source="fr.rphstudio.chess.game.pieces.Queen" target="fr.rphstudio.chess.game.IMove">
-      <point x="0.0" y="-14.5" />
-      <point x="165.5" y="78.0" />
-      <point x="28.25" y="78.0" />
-      <point x="20.75" y="14.5" />
+      <point x="0.0" y="-26.5" />
+      <point x="2542.0" y="781.0" />
+      <point x="1567.0" y="781.0" />
+      <point x="185.0" y="26.5" />
     </edge>
     <edge source="fr.rphstudio.chess.game.pieces.Knight" target="fr.rphstudio.chess.game.IMove">
-      <point x="0.0" y="-14.5" />
-      <point x="272.0" y="68.0" />
-      <point x="42.08333333333337" y="68.0" />
-      <point x="34.58333333333337" y="14.5" />
+      <point x="0.0" y="-48.5" />
+      <point x="2078.0" y="791.0" />
+      <point x="1493.0" y="791.0" />
+      <point x="111.0" y="26.5" />
     </edge>
     <edge source="fr.rphstudio.chess.game.pieces.Rook" target="fr.rphstudio.chess.game.IMove">
-      <point x="0.0" y="-14.5" />
-      <point x="-44.0" y="88.0" />
-      <point x="0.5833333333333144" y="88.0" />
-      <point x="-6.916666666666686" y="14.5" />
+      <point x="0.0" y="-26.5" />
+      <point x="1150.0" y="801.0" />
+      <point x="1345.0" y="801.0" />
+      <point x="-37.0" y="26.5" />
+    </edge>
+    <edge source="fr.rphstudio.chess.game.pieces.Pawn" target="fr.rphstudio.chess.game.IMove">
+      <point x="0.0" y="-26.5" />
+      <point x="222.0" y="781.0" />
+      <point x="1197.0" y="781.0" />
+      <point x="-185.0" y="26.5" />
+    </edge>
+    <edge source="fr.rphstudio.chess.game.pieces.King" target="fr.rphstudio.chess.game.IMove">
+      <point x="0.0" y="-37.5" />
+      <point x="686.0" y="791.0" />
+      <point x="1271.0" y="791.0" />
+      <point x="-111.0" y="26.5" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="1.0" x="109.0" y="125.5" />
-  <SelectedNodes />
-  <Categories />
+  <settings layout="Hierarchic Group" zoom="0.3722850455694848" x="1531.0000000000002" y="928.4999999999999" />
+  <SelectedNodes>
+    <node>fr.rphstudio.chess.game.pieces.Pawn</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
   <SCOPE>All</SCOPE>
   <VISIBILITY>private</VISIBILITY>
 </Diagram>
